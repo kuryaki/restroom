@@ -1,0 +1,25 @@
+{
+  "name": "restroom",
+  "version": "0.0.0",
+  "description": "ultralight rest api for mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "",
+  "keywords": [
+    "rest",
+    "api",
+    "mongodb"
+  ],
+  "author": "david@roncancio.me",
+  "license": "BSD",
+  "dependencies": {
+    "mongojs": "~0.7.2",
+    "express": "~3.2.6",
+    "restify": "~2.5.1"
+  },
+  "devDependencies": {
+    "chai": "~1.6.1"
+  }
+}
