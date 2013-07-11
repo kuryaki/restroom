@@ -30,8 +30,12 @@ var restroom = function(database){
         var per_page = parseInt(query.per_page) || 50;
         delete query.per_page;
 
-        var count = query.hasOwnProperty('count');
+        var count = query.hasOwnProperty('count'); // TODO count url
         delete query.count;
+
+        for(var key in query){
+            query[key] = parseInt(query[key]) || query[key];
+        }
 
         if(count){
             db.collection(collection)
