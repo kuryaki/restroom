@@ -35,6 +35,9 @@ var restroom = function(database){
 
         for(var key in query){
             query[key] = parseInt(query[key]) || query[key];
+            if(typeof query[key] === 'string' && query[key].indexOf('{')===0){    // TODO fix this!
+                query[key] = JSON.parse(query[key]);
+            }
         }
 
         if(count){
